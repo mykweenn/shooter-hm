@@ -81,7 +81,7 @@ func _shoot():
 		bullet_instance.global_position = %ShotPoint.global_position 
 		bullet_instance.global_rotation = %GunPivot.global_rotation 
 		get_parent().add_child(bullet_instance) 
-		#$GunPivot/GunshotAudio2D.play()
+		$GunPivot/GunshotAudio2D.play()
 		await get_tree().create_timer(0.2).timeout 
 
 

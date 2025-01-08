@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://liqu5hapajm1"]
+[gd_scene load_steps=15 format=4 uid="uid://liqu5hapajm1"]
 
 [ext_resource type="PackedScene" uid="uid://befjxcq60r32e" path="res://Scenes/player.tscn" id="1_olldm"]
 [ext_resource type="Script" path="res://Scenes/game.gd" id="1_wcl5l"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d1832rws2411h" path="res://Resources/Sprites/hm_assets/Floor tiles/bacground0.png" id="3_whsej"]
 [ext_resource type="Texture2D" uid="uid://d0dihafly8fl1" path="res://Resources/Sprites/hm_assets/Walls/sprWallHeavyH.png" id="4_6am7v"]
 [ext_resource type="Texture2D" uid="uid://d4ho43nixs4dp" path="res://Resources/Sprites/hm_assets/Walls/sprWallHeavyV.png" id="5_nbt1n"]
+[ext_resource type="PackedScene" uid="uid://diduob7cn5it" path="res://Scenes/enemy/enemy.tscn" id="7_ayjxb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qturb"]
 bg_color = Color(0.140447, 0.140447, 0.140447, 1)
@@ -876,3 +877,6 @@ unique_name_in_owner = true
 position = Vector2(434, 271)
 
 [node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource("7_ayjxb")]
+position = Vector2(353, 213)

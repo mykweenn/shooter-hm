@@ -1,7 +1,85 @@
-[gd_scene load_steps=12 format=3 uid="uid://b3c66jureqrp5"]
+[gd_scene load_steps=24 format=3 uid="uid://b3c66jureqrp5"]
 
 [ext_resource type="Texture2D" uid="uid://dl6130d4ct0p0" path="res://Resources/Sprites/Character-and-Zombie.png" id="1_lioba"]
 [ext_resource type="Script" path="res://Scenes/enemy.gd" id="1_owcc5"]
+[ext_resource type="Texture2D" uid="uid://vl1c6dteg000" path="res://Resources/Sprites/hm_assets/Player/sprLegs_strip16.png" id="2_fueii"]
+[ext_resource type="Texture2D" uid="uid://g3raesoe43ty" path="res://Resources/Sprites/hm_assets/Player/sprBikerLegsStairs_strip8.png" id="3_8cjau"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xatcb"]
+atlas = ExtResource("2_fueii")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwgxi"]
+atlas = ExtResource("3_8cjau")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0mqa"]
+atlas = ExtResource("3_8cjau")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0vue"]
+atlas = ExtResource("3_8cjau")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3qkt"]
+atlas = ExtResource("3_8cjau")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5ehe"]
+atlas = ExtResource("3_8cjau")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uykwf"]
+atlas = ExtResource("3_8cjau")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rarwc"]
+atlas = ExtResource("3_8cjau")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbc0b"]
+atlas = ExtResource("3_8cjau")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_op0v6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xatcb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwgxi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0mqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0vue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3qkt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5ehe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uykwf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rarwc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbc0b")
+}],
+"loop": true,
+"name": &"run",
+"speed": 14.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3e0p7"]
 atlas = ExtResource("1_lioba")
@@ -66,6 +144,15 @@ height = 18.0
 
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_owcc5")
+
+[node name="Legs" type="Node2D" parent="."]
+
+[node name="LegsAnimatedSprite2D" type="AnimatedSprite2D" parent="Legs"]
+sprite_frames = SubResource("SpriteFrames_op0v6")
+animation = &"run"
+
+[node name="Marker2D" type="Marker2D" parent="Legs"]
+position = Vector2(38, 0)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_tknjq")

@@ -1,6 +1,6 @@
 extends Area2D
 
-const SPEED := 800
+const SPEED := 1200
 const RANGE := 1200
 var travelled_distance = 0
 
@@ -20,5 +20,4 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body):
 	queue_free()  
 	if body.has_method("_dead"):
-		#body.knockback_velocity = position.direction_to(body.position) * knockback_velocity
 		body._dead()
