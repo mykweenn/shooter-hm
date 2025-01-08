@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bogupj33elbdu"
+path="res://.godot/imported/44 Magnum Eject Empty Full.wav-2cbddcf8d0c4a8837626c569a292a360.sample"
+
+[deps]
+
+source_file="res://Resources/Sounds/Snake's SECOND Authentic Gun Sounds/& More/Revolver/44 Magnum/WAV/44 Magnum Eject Empty Full.wav"
+dest_files=["res://.godot/imported/44 Magnum Eject Empty Full.wav-2cbddcf8d0c4a8837626c569a292a360.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

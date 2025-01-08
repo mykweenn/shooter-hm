@@ -1,0 +1,83 @@
+[gd_scene load_steps=12 format=3 uid="uid://b3c66jureqrp5"]
+
+[ext_resource type="Texture2D" uid="uid://dl6130d4ct0p0" path="res://Resources/Sprites/Character-and-Zombie.png" id="1_lioba"]
+[ext_resource type="Script" path="res://Scenes/enemy.gd" id="1_owcc5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3e0p7"]
+atlas = ExtResource("1_lioba")
+region = Rect2(0, 120, 48, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clllq"]
+atlas = ExtResource("1_lioba")
+region = Rect2(48, 120, 48, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtlxn"]
+atlas = ExtResource("1_lioba")
+region = Rect2(96, 120, 48, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0byi"]
+atlas = ExtResource("1_lioba")
+region = Rect2(144, 120, 48, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_to7ka"]
+atlas = ExtResource("1_lioba")
+region = Rect2(192, 120, 48, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tj6h4"]
+atlas = ExtResource("1_lioba")
+region = Rect2(240, 120, 48, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3cfpa"]
+atlas = ExtResource("1_lioba")
+region = Rect2(288, 120, 48, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tknjq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3e0p7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clllq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtlxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0byi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_to7ka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tj6h4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3cfpa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbi6c"]
+radius = 7.0
+height = 18.0
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_owcc5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tknjq")
+autoplay = "default"
+frame_progress = 0.632307
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_kbi6c")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

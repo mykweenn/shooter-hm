@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8r17567eeir8"
+path="res://.godot/imported/32 SW Rotate Cylinder.mp3-7d14efff07629740e4f0656e50c4ac85.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Snake's SECOND Authentic Gun Sounds/& More/Revolver/32 SW Long/MP3/32 SW Rotate Cylinder.mp3"
+dest_files=["res://.godot/imported/32 SW Rotate Cylinder.mp3-7d14efff07629740e4f0656e50c4ac85.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

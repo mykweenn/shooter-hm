@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c4mbf240lo336"
+path="res://.godot/imported/20 Gauge Double Tap.mp3-c2434f1b0dc75f8213a4da5ed26699fe.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Snake's SECOND Authentic Gun Sounds/Full Sounds/20 Gauge/MP3/20 Gauge Double Tap.mp3"
+dest_files=["res://.godot/imported/20 Gauge Double Tap.mp3-c2434f1b0dc75f8213a4da5ed26699fe.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

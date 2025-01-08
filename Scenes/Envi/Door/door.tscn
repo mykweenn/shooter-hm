@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=3 uid="uid://phkmm3fs2vtv"]
+
+[ext_resource type="Script" path="res://Scenes/Envi/Door/door.gd" id="1_62tpv"]
+[ext_resource type="Texture2D" uid="uid://12xm1fw3rlpy" path="res://Resources/Sprites/hm_assets/Doors/sprDoorV2.png" id="1_sh7ik"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2eijw"]
+size = Vector2(4, 31)
+
+[sub_resource type="Animation" id="Animation_cvwrb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.57437]
+}
+
+[sub_resource type="Animation" id="Animation_kmhgt"]
+resource_name = "close_door"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3.14159, 1.5708]
+}
+
+[sub_resource type="Animation" id="Animation_5avfh"]
+resource_name = "open_door"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.57437, 3.14159]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_60v4u"]
+_data = {
+"RESET": SubResource("Animation_cvwrb"),
+"close_door": SubResource("Animation_kmhgt"),
+"open_door": SubResource("Animation_5avfh")
+}
+
+[node name="Door" type="RigidBody2D"]
+rotation = 1.57437
+mass = 0.015
+gravity_scale = 0.0
+script = ExtResource("1_62tpv")
+
+[node name="SprDoorV2" type="Sprite2D" parent="."]
+texture = ExtResource("1_sh7ik")
+offset = Vector2(2.035, -14.88)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -15.5)
+shape = SubResource("RectangleShape2D_2eijw")
+debug_color = Color(0.888802, 0.192108, 0.658621, 0.42)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_60v4u")
+}

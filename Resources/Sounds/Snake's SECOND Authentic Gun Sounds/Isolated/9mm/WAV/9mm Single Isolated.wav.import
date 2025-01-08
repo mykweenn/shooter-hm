@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://co530ergre1mg"
+path="res://.godot/imported/9mm Single Isolated.wav-1ce8d5eb3ee70de551ab59e0f5fd1bf7.sample"
+
+[deps]
+
+source_file="res://Resources/Sounds/Snake's SECOND Authentic Gun Sounds/Isolated/9mm/WAV/9mm Single Isolated.wav"
+dest_files=["res://.godot/imported/9mm Single Isolated.wav-1ce8d5eb3ee70de551ab59e0f5fd1bf7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

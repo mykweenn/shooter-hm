@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bol3nh874l5r3"]
+
+[ext_resource type="Script" path="res://bullet.gd" id="1_lb54s"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_oltyw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gioy8"]
+radius = 1.25
+
+[node name="Bullet" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_lb54s")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(-5.96046e-08, 0)
+scale = Vector2(2.50227, 2.50227)
+mesh = SubResource("SphereMesh_oltyw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gioy8")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(4.47035e-08, 2.98023e-08)
+scale = Vector2(0.1, 0.1)
+
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]

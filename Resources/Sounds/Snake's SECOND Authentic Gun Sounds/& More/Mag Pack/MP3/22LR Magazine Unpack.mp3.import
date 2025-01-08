@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b7fual35tjdjd"
+path="res://.godot/imported/22LR Magazine Unpack.mp3-0df7b12b3f7f296b1f1397349ec04d24.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Snake's SECOND Authentic Gun Sounds/& More/Mag Pack/MP3/22LR Magazine Unpack.mp3"
+dest_files=["res://.godot/imported/22LR Magazine Unpack.mp3-0df7b12b3f7f296b1f1397349ec04d24.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

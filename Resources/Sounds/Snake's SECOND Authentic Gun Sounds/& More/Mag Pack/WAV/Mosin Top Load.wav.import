@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bfikh4xkh5v73"
+path="res://.godot/imported/Mosin Top Load.wav-b5df318561f54c50b005f89e006d29f9.sample"
+
+[deps]
+
+source_file="res://Resources/Sounds/Snake's SECOND Authentic Gun Sounds/& More/Mag Pack/WAV/Mosin Top Load.wav"
+dest_files=["res://.godot/imported/Mosin Top Load.wav-b5df318561f54c50b005f89e006d29f9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
